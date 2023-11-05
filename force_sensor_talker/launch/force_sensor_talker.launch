@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="force_sensor_talker" type="force_sensor_talker" name="force_sensor_talker_node" output="screen" />
+</launch>

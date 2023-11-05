@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="rover_uw3" type="rover_uw3" name="rover_uw3_node" output="screen" />
+</launch>
