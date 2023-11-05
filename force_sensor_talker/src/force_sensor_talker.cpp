@@ -65,7 +65,7 @@ int main(int argc, char **argv)
         msg.data.push_back(data[indx*col + 4]);
         msg.data.push_back(data[indx*col + 5]);
 
-        ROS_INFO("%f, %f, %f, %f, %f, %f", msg.data[0], msg.data[1], msg.data[2], msg.data[3], msg.data[4], msg.data[5]);
+        // ROS_INFO("%f, %f, %f, %f, %f, %f", msg.data[0], msg.data[1], msg.data[2], msg.data[3], msg.data[4], msg.data[5]);
 
         pub.publish(msg);
 

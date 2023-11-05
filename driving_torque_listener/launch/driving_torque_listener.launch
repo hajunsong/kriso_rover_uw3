@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="driving_torque_listener" type="driving_torque_listener" name="driving_torque_listener_node" output="screen" />
+</launch>

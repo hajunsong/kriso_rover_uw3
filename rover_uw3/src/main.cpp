@@ -32,7 +32,7 @@ int main(int argc, char** argv){
     ros::Subscriber subEncoder = nh.subscribe("/encoder_sensor", 1, cbEncoderSensor);
     ros::Subscriber subForce = nh.subscribe("/force_sensor", 1, cbForceSensor);
 
-    ros::Publisher pubJoint = nh.advertise<std_msgs::Float64MultiArray>("joint_driving_torque", 1);
+    ros::Publisher pubJoint = nh.advertise<std_msgs::Float64MultiArray>("driving_torque", 1);
 
     RobotArm robotArm(6, 6);
     double driving_torque[6] = {0,};
@@ -50,7 +50,7 @@ int main(int argc, char** argv){
             
             robotArm.run(encoder.data(), force, driving_torque);
             
-            ROS_INFO("driving_torque : %f, %f, %f, %f, %f, %f", driving_torque[0], driving_torque[1], driving_torque[2], driving_torque[3], driving_torque[4], driving_torque[5]);
+            // ROS_INFO("driving_torque : %f, %f, %f, %f, %f, %f", driving_torque[0], driving_torque[1], driving_torque[2], driving_torque[3], driving_torque[4], driving_torque[5]);
             
             std_msgs::Float64MultiArray msg;
 
